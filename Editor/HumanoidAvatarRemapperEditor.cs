@@ -147,20 +147,20 @@ public class HumanoidAvatarRemapperEditor : Editor
         //targetを変換して対象を取得
         HumanoidAvatarRemapper humanoidAvatarRemapper = target as HumanoidAvatarRemapper;
         
-        EditorGUILayout.LabelField("改変するアバターオブジェクトを指定してください(指定必須)");
+        EditorGUILayout.LabelField("改変するアバターのオブジェクト(指定必須)");
         EditorGUILayout.PropertyField(m_Avatar, new GUIContent("VRC Avatar Object"));
         EditorGUILayout.LabelField("　");
-        EditorGUILayout.LabelField("Humanoid Avatarの.assetファイル(任意)");
+        EditorGUILayout.LabelField("ベースになるHumanoid Avatarの.assetファイル(任意)");
         EditorGUILayout.PropertyField(m_BaseAvatar, new GUIContent("Base Avatar asset"));
         EditorGUILayout.LabelField("　");
-        EditorGUILayout.LabelField("足と床の高さのオフセット（脚の長さを変更したときに使用）");
+        EditorGUILayout.LabelField("足と床の高さのオフセット値（脚の長さを変更したときに使用）");
         EditorGUILayout.PropertyField(m_HipsHeightOffset, new GUIContent("HipsHeightOffset"));
         EditorGUILayout.LabelField("　");
-        EditorGUILayout.LabelField("Hipsの親のオブジェクト（例：Armature）（任意）");
+        EditorGUILayout.LabelField("Hipsの親のオブジェクト(例：Armature)(任意）");
         EditorGUILayout.PropertyField(m_Root, new GUIContent("Root"));
         EditorGUILayout.LabelField("　");
         
-        EditorGUILayout.LabelField("再割り当てするオブジェクトを指定");
+        EditorGUILayout.LabelField("Humanoidの各部位に割り当てるオブジェクトを指定");
         foldBody = EditorGUILayout.Foldout(foldBody, "Body Bone");
         if(foldBody)
         {
@@ -244,7 +244,7 @@ public class HumanoidAvatarRemapperEditor : Editor
         }
         serializedObject.ApplyModifiedProperties();
 
-        
+        EditorGUILayout.LabelField("");
         EditorGUILayout.LabelField("再割り当てしたAvatarの.assetをnyakomake/humanoidAvatarRemapper/以下に生成");
         //PublicMethodを実行する用のボタン
         if (GUILayout.Button("CreateRemapAvatar"))
