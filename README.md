@@ -8,7 +8,7 @@ https://docs.google.com/document/d/1sqh-gEa01pDIs4soi6X9OKZyohcpd7Rm61FUgAxL7_U/
 
 # license
 zlib License
-Copyright (c) <''year''> <''copyright holders''>
+Copyright (c) 2023 nyakome
 
 This software is provided 'as-is', without any express or implied warranty.
 In no event will the authors be held liable for any damages arising from the use of this software.
